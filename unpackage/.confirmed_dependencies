@@ -1,0 +1,37 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "css/normalize.css",
+      "css/bootstrap.min.css",
+      "css/animate.min.css",
+      "css/font-awesome-4.7.0/css/font-awesome.min.css",
+      "css/main.css",
+      "js/vendor/modernizr-3.7.1.min.js",
+      "js/vendor/jquery-3.4.1.min.js",
+      "js/plugins.js",
+      "js/bootstrap.min.js",
+      "js/jquery.backstretch.min.js",
+      "js/isotope.pkgd.min.js",
+      "js/main.js",
+      "img/bg-image-1.jpg",
+      "img/banner.jpg",
+      "img/bg-image-2.jpg",
+      "img/section-image-1.jpg",
+      "img/client-1.png",
+      "img/client-2.png",
+      "img/client-3.png",
+      "img/client-4.png",
+      "img/client-5.png",
+      "img/client-6.png",
+      "img/logo.jpg",
+      "img/testimonial-1.png",
+      "img/portfolio-1.jpg",
+      "img/portfolio-2.jpg",
+      "img/portfolio-3.jpg",
+      "img/portfolio-4.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}

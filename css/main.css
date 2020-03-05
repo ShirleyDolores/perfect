@@ -1,0 +1,615 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*全局样式*/
+html,body{
+  height:100%;
+}
+body{
+  font-size: 15px;
+  line-height: 1.50;
+  color:#333333;
+  background-color: #fff;
+  position:relative;
+}
+a:hover{
+  text-decoration: none;
+}
+section{
+  background-color: #ffffff;
+  padding:80px;
+}
+img{
+  display:block;
+  max-width: 100%;
+  height:auto;
+}
+/*头部样式*/
+header{
+  color:#fff;
+  background-color: rgba(0,0,0,0.5);
+  padding:10px 0;
+}
+.logo{
+  float:left;
+  margin:10px 10px 10px 0;
+  width:60px;
+  height:60px;
+}
+.site-name{
+  font-size:36px;
+  /*transition:font-size 1s;*/
+  transition:all 0.3s ease-in-out;
+}
+.site-name a{
+  color:#fff;
+}
+.site-slogan{
+  font-size:12px;
+}
+header .col-md-8{
+  margin-top:15px;
+}
+.navbar-default{
+  background-color:transparent;
+  border:none;
+}
+.navbar-default .navbar-nav>.active>a:hover{
+  background-color: transparent;
+}
+.navbar-default .navbar-nav>li>a{
+  color:#fff;
+  font-size:18px;
+}
+.navbar-default .navbar-nav>li.active>a:hover,
+.navbar-default .navbar-nav>li>a:hover{
+  color:#55ACEE;
+}
+.navbar-default .navbar-nav>li.active>a{
+  background-color:transparent;
+  color:#55ACEE;
+}
+/*固定头部*/
+.fixed-header-on header{
+  background-color:rgba(0,0,0,0.95);
+  padding:5px 0;
+  height:70px;
+}
+.fixed-header-on col-md-8{
+  margin-top:5px;
+}
+.fixed-header-on .site-name{
+  font-size:24px;
+}
+.fixed-header-on .logo{
+  -webkit-transform: scale(0.8);
+  transform:scale(0.8);
+  margin:0;
+}
+/*首页*/
+.index{
+  height:100%;
+}
+.index h3,.index p{
+  color:#fff;
+  font-size:24px;
+}
+.index h1{
+  color:#55ACEE;
+  font-size:60px;
+  font-weight:700;
+}
+.index::after{
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0,0,0,0.5);
+  content:'';
+}
+.index .catpion{
+  z-index:1;
+  position:absolute;
+  top:35%;
+}
+/*关于页面*/
+.space{
+  padding:20px 0;
+}
+.about img{
+  width:450px;
+  height:280px;
+}
+.about .list-unstyled li{
+  padding:5px 0;
+}
+.about .list-unstyled li i{
+  color:#55ACEE;
+}
+.panel-default>.panel-heading{
+  padding:0;
+}
+.panel-default>.panel-heading a{
+  display:inline-block;
+  width:100%;
+  background-color: #55ACEE;
+  color:#fff;
+  position:relative;
+  text-decoration: none;
+  padding:12px 15px;
+}
+.panel-default>.panel-heading a::after{
+  font-family:"fontawesome";
+  content:'\f147';
+  position:absolute;
+  right:15px;
+  font-size:14px;
+  top:35%;
+}
+.panel-default>.panel-heading a.collapsed{
+  background-color: #333;
+}
+.panel-default>.panel-heading a.collapsed::after{
+  content:"\f196";
+}
+.panel-default>.panel-heading a:hover{
+  background-color: #55ACEE;
+}
+.object-non-visiable{
+  opacity: 0;
+}
+.object-visiable{
+  opacity:1;
+}
+/*文章页面*/
+.articles{
+  position:relative;
+  background:url("../img/bg-image-2.jpg") no-repeat center center;
+  background-size:cover;
+  color:#fff;
+  font-width:600px;
+}
+.articles::after{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  width:100%;
+  height:100%;
+  content:'';
+  background-color: rgba(98,165,216,0.7);
+}
+.articles .container{
+  position:relative;
+  z-index: 1;
+}
+.articles h1{
+  font-width: 700px;
+}
+.articles i{
+  color:#fff;
+  transform: scale(0.8);
+}
+/*一起学习*/
+.together{
+  background-color: #55ACEE;
+  padding:15px 0;
+}
+.together h1{
+  color:#fff;
+}
+/*图集页面*/
+.filter li{
+  float:none;
+  display:inline-block;
+}
+.overlay-container{
+  position:relative;
+}
+.overlay{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: rgba(98,165,216,0.7);
+  cursor:pointer;
+  transform: scale(0.8);
+  opacity:0;
+  transition: all 0.2s;
+}
+.overlay i{
+  position:absolute;
+  left:40%;
+  top:40%;
+  font-size:18px;
+  color:#fff;
+}
+.overlay span{
+  position:absolute;
+  bottom:10px;
+  font-size: 13px;
+  color:#fff;
+  text-align:center;
+  width:100%;
+}
+.overlay-container:hover .overlay{
+  transform:scale(1);
+  opacity: 1;
+}
+.modal-header{
+  background-color: #55ACEE;
+  color:#fff;
+}
+.modal-header .close{
+  color:#fff;
+  opacity: 1;
+}
+/*认证页面*/
+.authentication{
+  position:relative;
+  background:url("../img/bg-image-1.jpg") no-repeat center center;
+  background-size:cover;
+  color:#fff;
+  font-weight:400;
+  padding-bottom: 150px;
+}
+.authentication::after{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  width:100%;
+  height:100%;
+  content:'';
+  background-color:rgba(0,0,0,0.5);
+}
+.authentication .container{
+  position:relative;
+  z-index:1;
+}
+.authentication h1{
+  font-size:36px;
+  font-weight: 900;
+  padding:60px 0 25px;
+}
+.authentication .media-left{
+  width:60px;
+  display:block;
+  float:left;
+}
+blockquote{
+  border-left:none;
+  padding-left:0px;
+}
+blockquote footer{
+  color:#ccc;
+}
+.ad{
+  position:absolute;
+  bottom:0;
+  left:0;
+  padding:20px 0;
+  width:100%;
+  background-color:rgba(98,165,216,0.7);
+}
+.happy{
+  background-color: rgb(0,0,0);
+  padding:20px 0;
+}
+.happy h1{
+  color:#fff;
+  font-weight: 700;
+}
+/*联系我们页面*/
+.contact .row{
+  font-size:18px;
+}
+.contact ul{
+  list-style: none;
+  padding:0;
+}
+.contact ul li{
+  margin:20px 0;
+}
+.contact .links li{
+  float:left;
+  font-size:36px;
+  margin:15px 30px 15px 0;
+}
+.contact .links li a{
+  color:#000;
+}
+.contact .links li.chrome a:hover{
+  color:orange;
+}
+.contact .links li.edge a:hover{
+  color:darkgreen;
+}
+.contact .links li.firefox a:hover{
+  color:darkred;
+}
+.contact .links li.github a:hover{
+  color:yellow;
+}
+.contact .links li.android a:hover{
+  color:yellowgreen;
+}
+.contact .links li.apple a:hover{
+  color:silver;
+}
+.contact .links li.html5 a:hover{
+  color:orangered;
+}
+.contact .links li.css3 a:hover{
+  color:cornflowerblue;
+}
+.contact span{
+  margin-top:6px;
+}
